@@ -1,0 +1,127 @@
+---
+title: "Pstat 131 Final Project"
+author: "Yu Tian"
+date: "Spring 2022-04-10"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      results = 'markup',
+                      fig.width = 4,
+                      fig.height = 3,
+                      fig.align = 'center',
+                      message = F,
+                      warning = F)
+
+# packages
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+library(ggplot2)
+library(corrplot)
+library(yardstick)
+tidymodels_prefer()
+```
+
+## Data Demo
+
+```{r}
+# Read the full data set into R using read_csv()
+fat_supply_quantity <- read.csv(file = 'Fat_Supply_Quantity_Data.csv')
+fat_supply_quantity %>% 
+  head()
+
+protein_supply_quantity <- read.csv(file = 'Protein_Supply_Quantity_Data.csv')
+protein_supply_quantity %>% 
+  head()
+
+food_supply_quantity_kg <- read.csv(file = 'Food_Supply_Quantity_kg_Data.csv')
+food_supply_quantity_kg %>% 
+  head()
+
+food_supply_kcal <- read.csv(file = 'Food_Supply_kcal_Data.csv')
+food_supply_kcal %>% 
+  head()
+
+descriptions <- read.csv(file = 'Supply_Food_Data_Descriptions.csv')
+descriptions %>% 
+  head()
+```
+
+I may only use the first four files.
+
+## An overview of your dataset
+
+#### What does it include
+?
+
+COVID-19 Healthy Diet Dataset in different counties
+
+
+
+#### Where and how will you be obtaining it? Include the link and source
+.
+
+https://www.kaggle.com/datasets/mariaren/covid19-healthy-diet-dataset?select=Food_Supply_kcal_Data.csv
+
+
+#### About how many observations? How many predictors
+?
+
+170 observations
+
+about 101 predictors
+
+
+#### What types of variables will you be working with
+?
+
+I will mainly work with the data related with covid-19.
+
+
+#### Is there any missing data? About how much? Do you have an idea for how to handle it
+?
+
+no (temporary)
+
+## An overview of your research question(s)
+
+#### What variable(s) are you interested in predicting? What question(s) are you interested in answering
+?
+
+What kind of food is best for avoid infection of covid-19 and helpful for recovery?
+What kind of food combinations are good for avoid infection of covid-19 and helpful for recovery?
+
+#### Name your response/outcome variable(s) and briefly describe it/them
+.
+
+food_type
+
+#### Will these questions be best answered with a classification or regression approach
+?
+
+maybe classification
+
+#### Which predictors do you think will be especially useful
+?
+
+percentage of COVID-19 active/death/confirmed/recover cases
+
+#### Is the goal of your model descriptive, predictive, inferential, or a combination? 
+Explain.
+
+combination
+
+
+## Your proposed project timeline
+#### When do you plan on having your data set loaded, beginning your exploratory data analysis, etc?
+Provide a general timeline for the rest of the quarter.
+
+I have loaded the data set, but they still need to be resort to research
+
+## Any questions or concerns
+####Are there any problems or difficult aspects of the project you anticipate?
+####Any specific questions you have for me/the instructional team?
+
+the predictors is too many, so choosing a specific direction to research is difficult for me now
